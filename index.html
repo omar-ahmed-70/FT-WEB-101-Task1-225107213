@@ -3,65 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omar Ahmed - Profile</title>
+  <title>Omar Ahmed - Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header>
-    <h1>Omar Ahmed Farouk</h1>
+    <h1 class="top-main-title">Omar Ahmed Farouk</h1>
     <nav class="navbar">
       <span class="nav-brand">Omar Ahmed</span>
       <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="about" class="profile-section">
-      <img src="images/me.jpg" alt="Personal photo of Omar Ahmed" class="profile-img">
+    <section id="home" class="hero-section">
+      <div class="hero-text">
+        <span class="subtitle">COMPUTER SCIENCE - FACULTY OF COMPUTERS</span>
+        <h2 class="hero-name">Omar<br>Ahmed<br>Farouk<br>El Saeed</h2>
+        <p class="student-id">ID // 225107213</p>
+        <p class="hero-desc">Student, builder, and web development learner. Field Training I (FT-WEB-101), Task 1.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-pill">Get in touch</a>
+          <button id="theme-toggle" class="btn-pill btn-outline">Toggle Dark/Light</button>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img src="images/me.jpg" alt="Personal photo of Omar Ahmed" class="arch-img">
+      </div>
     </section>
 
-    <section id="skills" class="cards-container">
-      <div class="card">
-        <h3>Programming</h3>
-        <p>Object-Oriented Programming with C# and Web Fundamentals.</p>
+    <section id="about" class="section-block">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2>About</h2>
       </div>
-      <div class="card">
-        <h3>Digital Logic</h3>
-        <p>Designing and testing circuits using logic gates and timers.</p>
+      <p class="about-lead">I am a Computer Science student who likes understanding how things work and then building them myself.</p>
+      <p class="about-sub">This page is my first task in Field Training I. It uses HTML, CSS, and JavaScript, with no frameworks or libraries, and I am using it to practice layouts, components, and clean structure.</p>
+    </section>
+
+    <section id="skills" class="section-block">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2>Skills</h2>
       </div>
-      <div class="card">
-        <h3>Gaming</h3>
-        <p>Competitive FPS and narrative survival horror games.</p>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="circle-progress" style="--percent: 85;">
+            <span>85%</span>
+          </div>
+          <p>HTML</p>
+        </div>
+        <div class="skill-item">
+          <div class="circle-progress" style="--percent: 75;">
+            <span>75%</span>
+          </div>
+          <p>CSS</p>
+        </div>
+        <div class="skill-item">
+          <div class="circle-progress" style="--percent: 65;">
+            <span>65%</span>
+          </div>
+          <p>JavaScript</p>
+        </div>
+        <div class="skill-item">
+          <div class="circle-progress" style="--percent: 90;">
+            <span>90%</span>
+          </div>
+          <p>C#</p>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="contact-section">
-      <h2>Leave a Message</h2>
-      <form id="contact-form">
+    <section id="projects" class="section-block">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2>Projects</h2>
+      </div>
+      <p class="section-hint">Click a card to flip it.</p>
+
+      <div class="cards-container">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="card-tag">Web</span>
+              <h3>An advanced notes app</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>advanced notes app built with c# using oop principles, including data persistence , a easy and clean UI and multiple features such as search and filter.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="card-tag">Web</span>
+              <h3>Personal profile page</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Built with pure HTML, CSS, and JS featuring smooth scrolling, theme toggle, and interactive flip cards. Its the page you're viewing now!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-block">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2>Contact</h2>
+      </div>
+      <form id="contact-form" class="contact-form">
         <div class="form-group">
-          <label for="visitor-name">Name:</label>
+          <label for="visitor-name">Name</label>
           <input type="text" id="visitor-name" name="name" required>
         </div>
         <div class="form-group">
-          <label for="email">Email:</label>
+          <label for="email">Email</label>
           <input type="email" id="email" name="email" required>
         </div>
-        <button type="submit">Send</button>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn-pill">Send Message</button>
+        <p id="form-feedback" class="feedback-msg"></p>
       </form>
     </section>
-
-    <div class="theme-control">
-      <button id="theme-toggle">Toggle Dark Mode</button>
-    </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 Omar Ahmed Farouk. All rights reserved.</p>
+    <p>Omar Ahmed Farouk El Saeed - ID 225107213<br>FT-WEB-101, Task 1 - 2026</p>
   </footer>
 
   <script src="js/script.js"></script>
